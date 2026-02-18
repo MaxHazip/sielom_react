@@ -1,0 +1,85 @@
+
+
+.advantages {
+
+  padding: 41px 0px 64px 0px;
+  background-image: url("../../imgs/logo_group.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 20%;
+
+}
+
+.advantages_title {
+
+  text-align: center;
+  font-weight: 800;
+  font-size: 3.57rem;
+  text-transform: uppercase;
+  color: #FFCC00;
+  margin-bottom: 27px;
+
+}
+
+.advantages_list_item {
+
+  width: 93.3%;
+  height: 190px;
+  margin: 0 auto;
+  padding: 40px 76px 40px 35px;
+  background-color: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(2px);
+  border-radius: 28px; 
+  margin-bottom: 34px;
+  display: flex;
+
+}
+
+.advantages_list_item:last-child {
+
+  margin-bottom: 0px;
+
+}
+
+.advantages_list_item_number{
+
+  width: 98px;
+  height: 98px;
+  font-weight: 800;
+  font-size: 4.79rem;
+  background-color: #FFCC00;
+  border-radius: 19px;
+  margin-right: 34px;
+  text-align: center;
+  padding-top: 13px;
+
+}
+
+#second-number {
+
+  background-color: #1B1B1F;
+  color: #FFCC00;
+
+}
+
+.advantages_list_item_content {
+
+  width: 85%;
+  color: white;
+
+}
+
+.advantages_list_item_title {
+
+  font-weight: 700;
+  font-size: 1.71rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+}
+
+.advantages_list_item_text {
+
+  font-weight: 300;
+  font-size: 1.43rem;
+
+}

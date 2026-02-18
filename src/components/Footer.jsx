@@ -16,7 +16,7 @@ class Footer extends React.Component {
             <div className="logo_container">
                 <img src={logo} alt="Логотип института" />
             </div>
-            <p className="copyRyght">&copy Сургутский институт экономики,<br />управления и права. 2025</p>
+            <p className="copyRyght">© Сургутский институт экономики,<br />управления и права. 2025</p>
         </footer>
     )
 

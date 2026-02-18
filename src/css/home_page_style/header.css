@@ -1,0 +1,191 @@
+.main-nav {
+
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 26px 0px;
+  border-radius: 28px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 4px 43.9px rgba(0, 0, 0, 0.42);
+  margin-bottom: 40px;
+
+}
+
+.main-nav_list {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.main-nav_list_item {
+
+
+  font-weight: 300;
+  font-size: 1.14rem;
+  color: white;
+  letter-spacing: 0px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+}
+
+.main-nav_list_item:hover {
+
+  color: #FFCC00;
+  transition: 300ms;
+
+}
+
+header {
+
+  padding: 20px 0px 0px 0px;
+  background: linear-gradient(to right, rgba(27, 27, 31, 1), rgba(27, 27, 31, 0.2)), linear-gradient(to top, rgba(27, 27, 31, 1), rgba(27, 27, 31, 0.2)), url("../../imgs/home_page_main_image.png") no-repeat;
+  background-size: cover;
+  height: 688px;
+  margin-bottom: 97px;
+
+}
+
+.logo_image {
+
+  width: 100px;
+  margin-bottom: 15px;
+
+}
+
+.header_title {
+
+  color: #FFCC00;
+  font-weight: 800;
+  font-size: 4.57rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+}
+
+.header_text {
+
+  font-weight: 300;
+  font-size: 1.43rem;
+  color: white;
+  margin-bottom: 40px;
+
+}
+
+.enroll_button {
+
+  display: inline-block;
+  padding: 4px 3px 4px 38px;
+  background-color: #FFCC00;
+  border-radius: 35px;
+  font-weight: 700;
+  font-size: 1.43rem;
+  width: 274px;
+  transition: all 0.5s ease;
+  margin-right: 15px;
+
+}
+
+.hovered {
+
+  height: 52px;
+  width: 52px;
+  background-color: black;
+  border-radius: 100px;
+  background-image: url("../../imgs/yellow_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 60% 45%;
+  transition: all 0.3s ease;
+  transform-origin: right center;
+  margin-left: auto;
+  overflow: hidden;
+
+}
+
+.enroll_text_hovered {
+
+  position: absolute;
+  transform-origin: right center;
+  margin-left: auto;
+  transition: 0.3s ease;
+  opacity: 0;
+  margin-left: 122px;
+  margin-top: -38px;
+
+}
+
+.enroll_button:hover .enroll_text_hovered{
+
+  transform-origin: right center;
+  opacity: 1;
+  transition: 0.3s ease;
+  color: #FFCC00;
+
+
+}
+
+
+
+.enroll_button:hover .hovered{
+
+  width: 268px;
+  height: 54px;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+  background-image: url("../../imgs/right_yellow_arrow.svg");
+  background-position: 10% center;
+  
+
+}
+
+.enroll_button:hover {
+
+  padding: 3px;
+
+}
+
+.enroll_button:hover .enroll_text{
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+}
+
+.enroll_text {
+
+  margin-top: 15px;
+  position: absolute;
+
+}
+
+.header_buttons {
+
+  display: flex;
+  align-items: center;
+
+}
+
+.contact_button {
+
+  padding: 16px 50px 16px 50px;
+  border: 2.5px solid white;
+  color: white;
+  border-radius: 43px;
+  font-weight: 600;
+  font-size: 1.43rem;
+  font-family: "Inter";
+  transition: 0.3s ease;
+
+}
+
+.contact_button:visited {
+
+  color: white;
+
+}
+
+.contact_button:hover {
+
+  border-color: #FFCC00;
+  color: #FFCC00;
+
+} 
