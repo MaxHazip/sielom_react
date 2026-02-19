@@ -1,0 +1,19 @@
+.main-container {
+
+    width: 100%;
+
+}
+
+.window {
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.all-pages-container {
+
+    height: 100%;
+    display: flex;
+
+}
