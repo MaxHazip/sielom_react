@@ -1,6 +1,8 @@
-import {useState, useEffect, Children} from 'react'
+import {useState, useEffect, Children, cloneElement} from 'react'
 
 import '../../css/home_page_style/teacherCarousel.css'
+
+const PAGE_WIDTH = 368
 
 export const TeacherCarousel = ({children}) => {
 
@@ -13,9 +15,10 @@ export const TeacherCarousel = ({children}) => {
                 return cloneElement(child, {
                     style: {
 
-                        height:100%,
-                        minWidth:100%,
-                        maxWidth: 100%
+                        height:'100%',
+                        // padding: 
+                        minWidth: `${PAGE_WIDTH}px`,
+                        maxWidth: `${PAGE_WIDTH}px`
                         
                     },
                 })
