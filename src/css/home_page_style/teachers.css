@@ -36,16 +36,16 @@
 
 .teachers_list {
 
-  display: grid;
-  grid-auto-flow: column;
+  /* display: grid; */
+  /* grid-auto-flow: column;
   grid-auto-columns: 368px;
-  gap: 16px;
-  transition: transform 0.3s ease;
-  align-items: stretch;
-  margin-left: -1723px;
+  gap: 16px; */
+  /* transition: transform 0.3s ease;
+  align-items: stretch; */
+  /* margin-left: -1723px;
   margin-bottom: 184px;
   position: relative;
-  z-index: 0;
+  z-index: 0; */
 
 }
 

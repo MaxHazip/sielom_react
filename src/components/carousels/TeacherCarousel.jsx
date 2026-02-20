@@ -1,5 +1,28 @@
+import {useState, useEffect, Children} from 'react'
+
+import '../../css/home_page_style/teacherCarousel.css'
 
 export const TeacherCarousel = ({children}) => {
+
+    const [pages, setPages] = useState([])
+
+    useEffect(() => {
+        setPages(
+
+            Children.map(children, child => {
+                return cloneElement(child, {
+                    style: {
+
+                        height:100%,
+                        minWidth:100%,
+                        maxWidth: 100%
+                        
+                    },
+                })
+            })
+
+        )
+    }, [])
 
     return (
         <div className="main-container">
