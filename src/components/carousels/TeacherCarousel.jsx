@@ -9,14 +9,14 @@ export const TeacherCarousel = ({children}) => {
     const [pages, setPages] = useState([])
 
     useEffect(() => {
+        
         setPages(
 
             Children.map(children, child => {
                 return cloneElement(child, {
                     style: {
 
-                        height:'100%',
-                        // padding: 
+                        height:'100%',                        
                         minWidth: `${PAGE_WIDTH}px`,
                         maxWidth: `${PAGE_WIDTH}px`
                         

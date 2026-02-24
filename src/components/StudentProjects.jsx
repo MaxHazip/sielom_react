@@ -1,49 +1,78 @@
 import React from "react";
-import '../css/home_page_style/student_projects.css'
+
+import "../css/home_page_style/student_projects.css";
+
+import ProjectsItems from "./ProjectsItems";
+
+const PAGE_WIDTH = 474;
+
+const MIN_OFFSET = 0;
+const MAX_OFFSET = -((PAGE_WIDTH + 47) * 3)
 
 class StudentProjects extends React.Component {
 
-    render() {
+  constructor(props) {
 
-        return(
-            <section className="student-projects">
-                <div className="container" id="student-projects_container">
-                    <h1 className="student-projects_title">Проекты студентов</h1>
-                    <p className="student-projects_text">Наши студенты не просто заучивают синтаксис, а быстро учатся работать с новыми технологиями (от нейросетей и блокчейна до квантовых вычислений), часто осваивая их параллельно с основной учебой. Многие уже на 1-2 курсе ищут стажировки, фриланс или начинают собственные пет-проекты. Они понимают, что портфолио важнее оценок. А также Легко объединяются в команды для хакатонов, курсовых и стартапов, распределяя роли (бэкенд, фронтенд, дизайн, менеджмент).</p>
-                    <div className="student-projects_arrows">
-                        <button className="student-projects_arrow" id="arrow_left"></button>
-                        <button className="student-projects_arrow" id="arrow_right"></button>
-                    </div>
-                </div>
-                <div className="student-projects_scrol">
-                    <ul className="student-projects_scrol_list" id="slider-track">
-                        <li className="student-projects_scrol_list_item">
-                            <div className="student-projects_scrol_list_item_image-block" id="first_project_image"></div>
-                            <p className="student-projects_scrol_list_item_text">24–25 сентября в СурГУ состоялся конкурс по кибербезопасности в финансах</p>
-                            <a href="#" className="student-projects_scrol_list_item_button">Перейти</a>
-                        </li>
-                        <li className="student-projects_scrol_list_item">
-                            <div className="student-projects_scrol_list_item_image-block" id="second_project_image"></div>
-                            <p className="student-projects_scrol_list_item_text">Наш студент - бронзовый призёр финала чемпионата «Профессионалы»</p>
-                            <a href="#" className="student-projects_scrol_list_item_button">Перейти</a>
-                        </li>
-                        <li className="student-projects_scrol_list_item">
-                            <div className="student-projects_scrol_list_item_image-block" id="third_project_image"></div>
-                            <p className="student-projects_scrol_list_item_text">Цифровой челлендж взят!<br />Наши команды громко заявили о себе на хакатоне</p>
-                            <a href="#" className="student-projects_scrol_list_item_button">Перейти</a>
-                        </li>
-                        <li className="student-projects_scrol_list_item">
-                            <div className="student-projects_scrol_list_item_image-block" id="fourth_project_image"></div>
-                            <p className="student-projects_scrol_list_item_text">С 25 по 27 июня прошёл один из крупнейших событий года в сфере цифровых технологий — XVI Международный IT-Форум</p>
-                            <a href="#" className="student-projects_scrol_list_item_button">Перейти</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        )
+    super(props)
 
+    this.state = {
+      offset: 0,
     }
+
+    this.leftButton = this.leftButton.bind(this)
+    this.rightButton = this.rightButton.bind(this)
+
+  }
+
+  render() {
+    return (
+      <section className="student-projects">
+        <div className="container" id="student-projects_container">
+          <h1 className="student-projects_title">Проекты студентов</h1>
+          <p className="student-projects_text">
+            Наши студенты не просто заучивают синтаксис, а быстро учатся
+            работать с новыми технологиями (от нейросетей и блокчейна до
+            квантовых вычислений), часто осваивая их параллельно с основной
+            учебой. Многие уже на 1-2 курсе ищут стажировки, фриланс или
+            начинают собственные пет-проекты. Они понимают, что портфолио важнее
+            оценок. А также Легко объединяются в команды для хакатонов, курсовых
+            и стартапов, распределяя роли (бэкенд, фронтенд, дизайн,
+            менеджмент).
+          </p>
+          <div className="student-projects_arrows">
+            <button
+              className="student-projects_arrow"
+              id="arrow_left"
+              onClick={() => this.leftButton(this.state.offset)}
+            ></button>
+            <button
+              className="student-projects_arrow"
+              id="arrow_right"
+              onClick={() => this.rightButton(this.state.offset)}
+            ></button>
+          </div>
+        </div>
+        <ProjectsItems offset={this.state.offset} />
+      </section>
+    );
+  }
+
+  leftButton = (currentOffset) => {
+    
+    const newOffset = currentOffset + (PAGE_WIDTH + 47);
+
+    this.setState({offset: Math.min(newOffset, MIN_OFFSET)});
+    
+  };
+
+  rightButton = (currentOffset) => {
+    
+    const newOffset = currentOffset - (PAGE_WIDTH + 47);
+
+    this.setState({offset: Math.max(newOffset, MAX_OFFSET)});
+    
+  };
 
 }
 
-export default StudentProjects
+export default StudentProjects;
