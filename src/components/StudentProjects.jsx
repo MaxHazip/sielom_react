@@ -7,7 +7,9 @@ import ProjectsItems from "./ProjectsItems";
 const PAGE_WIDTH = 474;
 
 const MIN_OFFSET = 0;
-const MAX_OFFSET = -((PAGE_WIDTH + 47) * 3)
+const MARGIN = 47
+const MAX_OFFSET = -((PAGE_WIDTH + MARGIN) * 5)
+const PAGE_WIDTH_MARGINS = PAGE_WIDTH + MARGIN
 
 class StudentProjects extends React.Component {
 
@@ -16,7 +18,7 @@ class StudentProjects extends React.Component {
     super(props)
 
     this.state = {
-      offset: 0,
+      offset: -(PAGE_WIDTH + MARGIN),
     }
 
     this.leftButton = this.leftButton.bind(this)
@@ -59,7 +61,15 @@ class StudentProjects extends React.Component {
 
   leftButton = (currentOffset) => {
     
-    const newOffset = currentOffset + (PAGE_WIDTH + 47);
+    let newOffset = currentOffset + (PAGE_WIDTH + 47);
+
+    if (newOffset >= 0) {
+
+      newOffset = -(PAGE_WIDTH_MARGINS * 4)
+
+    }
+
+    console.log(newOffset)
 
     this.setState({offset: Math.min(newOffset, MIN_OFFSET)});
     
@@ -67,7 +77,13 @@ class StudentProjects extends React.Component {
 
   rightButton = (currentOffset) => {
     
-    const newOffset = currentOffset - (PAGE_WIDTH + 47);
+    let newOffset = currentOffset - (PAGE_WIDTH + 47);
+
+    if (newOffset === MAX_OFFSET + PAGE_WIDTH_MARGINS) {
+
+      newOffset = -(PAGE_WIDTH_MARGINS)
+
+    }
 
     this.setState({offset: Math.max(newOffset, MAX_OFFSET)});
     
